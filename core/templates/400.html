@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}
+400 | {{ block.super }}
+{% endblock %}
+{% block home %}
+<div id="error" class="container">
+<h1>400</h1>
+<h2>Ops, solicitação inválida!</h2>
+</div>
+{% endblock %}

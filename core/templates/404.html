@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}
+404 | {{ block.super }}
+{% endblock %}
+{% block home %}
+<div id="error" class="container">
+    <h1 >404</h1>
+    <h2>Ops, página não encontrada!</h2>
+</div>
+{% endblock %}

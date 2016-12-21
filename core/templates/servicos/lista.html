@@ -1,0 +1,34 @@
+{% extends "servico.html" %}
+{% block title %}
+Serviços | {{ block.super }}
+{% endblock %}
+{% block content %}
+
+{% for servicos in object_list %}
+                  <div class=" col-xs-12 col-sm-4 col-md-3">
+                  <a href="{{ servicos.get_absolute_url }}">
+                  <div class="thumbnail">
+                  {% if servicos.image%}
+                    <img src="{{ servicos.image.url }}" alt="...">
+                  {% endif %}
+                    <div  class="caption" >
+                      <h4>{{ servicos.name|capfirst }}</h4>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+{% endfor %}
+<div id="paginacao" class="row" >
+  <div class="col-xs-12" >
+    <nav>
+      <ul class="pagination" >
+        {% for page in paginator.page_range %}
+        <li> <a href="?page={{ page }}">{{ page }}</a> </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</div>
+
+{% endblock %}
+

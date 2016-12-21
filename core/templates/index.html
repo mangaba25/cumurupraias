@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block home %}
+	<div id="container1" class="container">
+
+			<div class="col-md-10 col-md-offset-1" >
+				<div  class="row" >
+					<h2><strong>Cumuruxatiba</strong></h2>
+					  	<h2>Onde o tempo não tem pressa e a preguiça é mais gostosa</h2>
+				  	</div>
+
+				  	<div class="row" id="unidade" >
+				  		{% for item in home %}
+				  		<div class="col-xs-12 " style="margin-top: 80px; ">
+				  			<h2>{{ item.phrase }}</h2>
+				  			<div class="thumbnail">
+				  			{% if item.image %}
+		                    	<img src="{{ item.image.url }}" alt="{{ item.description }}">
+		                    {% endif %}
+		                	</div>
+						    <p id="p">{{ item.subtitle }}</p>
+
+						    <p>{{ item.content }} <a href="{{ item.link }}" target="_blank" >{{ item.palavralink }}</a> </p>
+
+
+						</div>
+						{% endfor %}
+					</div>
+
+
+					</div>
+			</div>
+
+
+
+
+
+			<div id="dica" class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+				<h1> <strong> Não deixe de:</strong></h1>
+				{% for item in dica %}
+					<p ><strong>-&ensp;</strong>{{ item.dica|capfirst }}</p>
+				{% endfor %}
+			</div>
+
+
+
+
+			<div id="aviso" class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+				<h1 > <strong> Importante saber:</strong></h1 >
+				{% for item in aviso %}
+					<p><strong>-&ensp;</strong>{{ item.aviso|capfirst }}</p>
+				{% endfor %}
+			</div>
+    </div>
+
+
+
+
+{% endblock %}

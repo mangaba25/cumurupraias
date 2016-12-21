@@ -1,0 +1,26 @@
+{% extends "ondeficar.html" %}
+{% load thumbnail %}
+
+{% block title %}
+Onde Ficar | {{ block.super }}
+{% endblock %}
+
+
+
+{% block content %}
+
+{% for ondeficar in object_list %}
+                  <div id="lista" class=" col-xs-12 col-sm-4 col-md-3">
+                  <a href='{{ ondeficar.get_absolute_url }}'>
+                  <div class="thumbnail">
+                    <img src="{{ ondeficar.image_1|thumbnail_url:'image_1' }}" alt="...">
+                    <div class="caption">
+                      <h4>{{ ondeficar.name|capfirst }}</h4>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+{% endfor %}
+
+{% endblock %}
+

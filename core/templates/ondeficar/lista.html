@@ -1,0 +1,35 @@
+{% extends "ondeficar.html" %}
+{% load thumbnail %}
+
+{% block title %}
+Onde Ficar | {{ block.super }}
+{% endblock %}
+
+{% block content %}
+
+{% for product in object_list %}
+                  <div id="lista" class=" col-xs-12 col-sm-4 col-md-3">
+                  <a href='{{ product.get_absolute_url }}'>
+                  <div class="thumbnail">
+                    <img src="{{ product.image_1|thumbnail_url:'image_1' }}" alt="...">
+                    <div class="caption">
+                      <h4>{{ product.name|capfirst }}</h4>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+{% endfor %}
+<div id="paginacao" class="row" >
+  <div class="col-xs-12" >
+    <nav>
+      <ul class="pagination" >
+        {% for page in paginator.page_range %}
+        <li> <a href="?page={{ page }}">{{ page }}</a> </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</div>
+
+{% endblock %}
+

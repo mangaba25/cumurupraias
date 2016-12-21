@@ -1,0 +1,47 @@
+{% extends "servico.html" %}
+{% load thumbnail %}
+{% block title %}
+{{ current_category|capfirst }} | {{ block.super }}
+{% endblock %}
+
+
+
+{% block content %}
+
+    <h2 id="titulo-servico" >{{ current_category|capfirst }}</h2>
+
+    {% for servico in object_list %}
+
+           <div id="lista-servico" class="col-sm-6 col-md-4">
+
+                <div class="thumbnail">
+                    <h4  >{{ servico.name|capfirst }}</h4>
+
+                    {% if servico.image_servico %}
+                        <img class="img-responsive" src="{{servico.image_servico|thumbnail_url:'image_servico'  }}" width="300" height="50" alt="...">
+                    {% endif %}
+
+                    {%if servico.texto %}
+                        <p id="p-servico" >{{ servico.texto}}</p>
+                    {% endif %}
+
+                    {% if servico.address %}
+                        <p><strong><span class="glyphicon glyphicon-map-marker" aria-hidden="true">&ensp;</span>Endereço</strong> : {{servico.address}}</p>
+                    {% endif %}
+                    {% if servico.email %}
+                        <p><strong><span class="glyphicon glyphicon-envelope" aria-hidden="true">&ensp;</span>E-mail</strong> : {{servico.email}}</p>
+                    {% endif %}
+
+                    {% if servico.contact %}
+                        <p><strong><span class="glyphicon glyphicon-earphone" aria-hidden="true">&ensp;</span>Telefone </strong>: {{servico.contact}}</p>
+                    {% endif %}
+
+                    {% if servico.site %}
+                        <p><strong><span class="glyphicon glyphicon-globe" aria-hidden="true">&ensp;</span>Site</strong> : <a href="{{ servico.link }}" target="_blank">{{servico.site}}</a></p>
+                    {% endif %}
+                </div>
+            </div>
+
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "passeio.html" %}
+{% load thumbnail %}
+
+{% block content %}
+
+{% for passeio in object_list %}
+                  <div id="lista" class=" col-xs-12 col-sm-4 col-md-3">
+                  <a href='{{ passeio.get_absolute_url }}'>
+                  <div class="thumbnail">
+                    <img src="{{ passeio.image_1|thumbnail_url:'image_1' }}" alt="...">
+                    <div class="caption">
+                      <h4>{{ passeio.name|capfirst }}</h4>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+{% endfor %}
+
+{% endblock %}
+

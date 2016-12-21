@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'passeios',
     'praias',
     'servicos',
+    'easy_thumbnails',
 ]
 
 MIDDLEWARE = [
@@ -124,5 +125,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+THUMBNAIL_ALIASES = {
+    '':{
+        'image_1':{'size': (300, 150), 'crop': True},
+        'image_servico':{'size':(250,150), 'crop': True},
+        'image':{'size':(1000,100), 'crop': True},
+    },
+}

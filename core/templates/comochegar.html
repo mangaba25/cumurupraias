@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+Como Chegar | {{ block.super }}
+{% endblock %}
+{% block home %}
+    <div id="como-chegar" class="col-md-8 col-md-offset-2">
+        <h1 id="titulo-comochegar" >Como Chegar</h1>
+        <div class="row" >
+            <div class="col-xs-12" >
+                <p> Venha conhecer nossa vila simples e humilde, essas são as opções para chegar em Cumuruxatiba.</p>
+            </div>
+
+            <div class="col-xs-12" >
+                <h3>De avião</h3>
+
+                <p>Esta opção pode ser feita tanto para Posto Seguro que fica a 210km, quanto para Teixeira de freitas que fica a 111km e ambos podem ser concluídos pelos serviços de Ônibus, Táxi ou Translado.</p>
+            </div>
+
+            <div class=" col-xs-12" >
+                <h3>De carro</h3>
+                <p>Para quem está ao norte, basta seguir pela BR 101 até Itamarajú, seguindo até Prado. Para quem está ao sul, basta seguir pela BR 101 sentido litoral até Teixeira de Freitas, seuqe até Alcobaça e por fim segue até o  Prado.</p>
+            </div>
+
+            <div class="col-xs-12" >
+                <p>A partir de Prado, existem duas formas de se chegar a Cumuruxatiba. A estrada principal é a opção mais longa, porém com maior segurança: são 9km de asfalto e 31km na estrada de chão, normalmente bem conservada. A segunda alternativa é mais curta (32km) e oferece belíssimas paisagens, pois ruma paralelamente às praias, por cima das falésias. No entanto, por ser um percurso integral de terra, o acesso fica bastante complicado em épocas chuvosas.</p>
+            </div>
+
+            <div class="col-xs-12" >
+                <h3>Táxi e Translado </h3>
+                <p>Estas são boas opções e uma prática comum para quem deseja ghegar um Cumuruxatiba. Estes serviço são usados tanto para emergências quanto para usufruir as belas paisagens que a vila oferece. E <a href="https://cumuruxatibapraias.herokuapp.com/servicos/táxi" target="_blank" >aqui</a> você encontra profissionais capacitados a oferecer o melhor serviço.</p>
+
+            </div>
+
+            <div class="col-xs-12" >
+                <h3>De ônibus</h3>
+                <p>Visitantes provenientes de diversas localidades do país podem chegar a Prado por meio da empresa São Geraldo (0800-704-3496), que mantém linhas diretas de Belo Horizonte, Brasília, Goiânia, Rio de Janeiro, São Paulo, entre outras. A viagem de Prado até Cumuruxatiba, dura aproximadamente uma hora, através da linha oferecida pela companhia Expresso Brasileiro.</p>
+                <h5 id="h5comochegar" >Estação Rodoviária de Prado: (73) 3298-1273</h5>
+            </div>
+            <div class="col-xs-12" id="mapa" >
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51302.93414147517!2d-39.22100393833336!3d-17.115967220142714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7344fcf910a856b%3A0x60d7e073754e63f3!2sCumuruxatiba%2C+Prado+-+BA!5e0!3m2!1spt-BR!2sbr!4v1476449346046" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+{% endblock %}

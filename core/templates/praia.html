@@ -1,0 +1,21 @@
+
+{% extends "base.html"%}
+{% load thumbnail %}
+
+{% block home %}
+<div id="container" class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1" >
+
+                    {% for foto in capa %}
+                        <img id="capa" class="img-responsive" src="{{ foto.image|thumbnail_url:'image'  }}" alt="{{ foto.description }}" width="1000" height="50">
+                    {% endfor %}
+
+                {% block content %}
+
+                {% endblock %}
+
+        </div>
+    </div>
+</div>
+{% endblock %}

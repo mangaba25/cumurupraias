@@ -1,0 +1,20 @@
+{% extends "artesanato.html" %}
+{% load thumbnail %}
+
+{% block content %}
+
+
+{% for artesanato in object_list %}
+                  <div class=" col-xs-12 col-sm-4 col-md-3">
+                  <a href="{{ artesanato.get_absolute_url }}">
+                    <div class="thumbnail">
+                      <img src="{{ artesanato.image_1|thumbnail_url:'image_1' }}" alt="...">
+                      <div class="caption">
+                        <h4>{{ artesanato.name|capfirst }}</h4>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+{% endfor %}
+{% endblock %}
+
