@@ -225,12 +225,13 @@ h3{
 #lista-servico{
      min-height: 500px;
 }
-#lista-servico #p-servico{
+.thumbnail #p-servico{
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 12px;
     padding-right:5px;
     padding-left:5px;
+    color: red;
 }
 #lista p{
 
