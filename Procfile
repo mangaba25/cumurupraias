@@ -1,2 +1,2 @@
+web: gunicorn cumurupraias.wsgi --log-file=-
 
-web: gunicorn cumurupraias.wsgi --log-file -
