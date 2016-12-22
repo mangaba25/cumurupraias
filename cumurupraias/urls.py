@@ -14,11 +14,33 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
-from django.conf import settings
-from django.conf.urls.static import static
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf import settings
+from django.views.static import serve as serve_static
+from django.conf.urls.static import static
+from django.contrib.sitemaps.views import sitemap
+
+from ondecomer.sitemaps import OndeComerSitemap
+from home.sitemaps import HomeSitemap
+from ondeficar.sitemaps import OndeFicarSitemap
+from passeios.sitemaps import PasseioSitemap
+from praias.sitemaps import PraiaSitemap
+from servicos.sitemaps import ServicoSitemap
+from artesanatos.sitemaps import ArtesanatoSitemap
+
 from home import views
+
+sitemaps = {
+    'ondecomer': OndeComerSitemap,
+    'home':HomeSitemap,
+    'ondeficar':OndeFicarSitemap,
+    'passios':PasseioSitemap,
+    'praias':PraiaSitemap,
+    'servicos':ServicoSitemap,
+    'artesanatos':ArtesanatoSitemap,
+
+}
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -30,6 +52,18 @@ urlpatterns = [
     url(r'^compras/', include('artesanatos.urls', namespace='artesanatos')),
     url(r'^servicos/', include('servicos.urls', namespace='servicos')),
     url(r'^praias/', include('praias.urls', namespace='praias')),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
+    name='django.contrib.sitemaps.views.sitemap'),
 ]
 if settings.DEBUG:
-    urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+    )
+
+
+
+from django.conf.urls import url, include
+from django.contrib import admin
+from django.conf import settings
+from django.views.static import serve as serve_static
+from django.conf.urls.static import static
