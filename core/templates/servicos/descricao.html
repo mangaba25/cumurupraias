@@ -7,7 +7,6 @@
 
 
 {% block content %}
-
     <h2 id="titulo-servico" >{{ current_category|capfirst }}</h2>
 
     {% for servico in object_list %}
@@ -22,7 +21,7 @@
                     {% endif %}
 
                     {%if servico.texto %}
-                        <h6 id="p-servico" >{{ servico.texto}}</h6>
+                        <p id="p-servico" >{{ servico.texto}}</p>
                     {% endif %}
 
                     {% if servico.address %}
@@ -41,9 +40,6 @@
                     {% endif %}
                 </div>
             </div>
-
-
-
     {% endfor %}
 
 {% endblock %}

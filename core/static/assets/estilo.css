@@ -231,7 +231,6 @@ h3{
     font-size: 12px;
     padding-right:5px;
     padding-left:5px;
-    color: red;
 }
 #lista p{
 
@@ -239,14 +238,7 @@ h3{
     padding-right:5px;
     padding-left:5px;
 }
-#lista #p-servico{
 
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 12px;
-    padding-right:5px;
-    padding-left:5px;
-}
 #lista h4{
     font-size: 22px;
 }
@@ -273,8 +265,14 @@ h3{
 
 
 @media screen and (min-width: 768px) and (max-width: 1028px){
-    #container1{margin-top: 300px;}
-    #container{margin-top:300px;}
+    #container1{margin-top: 270px;}
+    #container{margin-top:270px;}
+        #lista-servico p {
+        font-size: 12px;
+        padding-right:5px;
+        padding-left:5px;
+
+    }
 
 }
 @media screen and (max-width: 767px){
@@ -284,10 +282,10 @@ h3{
     #lista-servico{
      min-height: 0px;
     }
-    #lista-servico #p-servico {
+    #lista-servico p{
         margin-top: 15px;
         margin-bottom: 25px;
-        font-size: 16px;
+        font-size: 12px;
         padding-right:5px;
         padding-left:5px;
     }
