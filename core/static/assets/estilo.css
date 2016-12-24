@@ -234,6 +234,9 @@ h3{
     padding-left:5px;
     color: #696969;
 }
+.thumbnail img{
+    margin-bottom: 10px;
+}
 #lista p{
 
     font-size: 12px;
