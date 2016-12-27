@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load thumbnail %}
 {% block title %}
 	{{ passeio|capfirst }} | {{ block.super }}
 {% endblock %}
@@ -14,6 +15,30 @@
 					<li data-target="#myCarousel" data-slide-to="1"></li>
 					<li data-target="#myCarousel" data-slide-to="2"></li>
 					<li data-target="#myCarousel" data-slide-to="3"></li>
+
+					{% if passeio.image_5 %}
+						<li data-target="#myCarousel" data-slide-to="4"></li>
+					{% endif  %}
+
+					{% if passeio.image_6 %}
+						<li data-target="#myCarousel" data-slide-to="5"></li>
+					{% endif  %}
+
+					{% if passeio.image_7%}
+						<li data-target="#myCarousel" data-slide-to="6"></li>
+					{% endif  %}
+
+					{% if passeio.image_8 %}
+						<li data-target="#myCarousel" data-slide-to="7"></li>
+					{% endif  %}
+
+					{% if passeio.image_9 %}
+						<li data-target="#myCarousel" data-slide-to="8"></li>
+					{% endif  %}
+
+					{% if passeio.image_10 %}
+						<li data-target="#myCarousel" data-slide-to="9"></li>
+					{% endif  %}
 				</ol>
 
 					 <!-- Wrapper for slides -->
@@ -35,6 +60,43 @@
 					<div class="item">
 					<img src="{{passeio.image_4.url}}" alt="{{passeio.decription_4}}" width="1000" height="500">
 					</div>
+
+                    {% if passeio.image_5 %}
+                    <div class="item">
+                    <img src="{{passeio.image_5.url}}" alt="{{passeio.decription_5}}" width="1000" height="500">
+                    </div>
+                    {% endif %}
+
+                    {% if passeio.image_6 %}
+                    <div class="item">
+                    <img src="{{passeio.image_6.url}}" alt="{{passeio.decription_6}}" width="1000" height="500">
+                    </div>
+                    {% endif %} 
+
+                    {% if passeio.image_7 %}
+                    <div class="item">
+                    <img src="{{passeio.image_7.url}}" alt="{{passeio.decription_7}}" width="1000" height="500">
+                    </div>
+                    {% endif %} 
+
+                    {% if passeio.image_8 %}
+                    <div class="item">
+                    <img src="{{passeio.image_8.url}}" alt="{{passeio.decription_8}}" width="1000" height="500">
+                    </div>
+                    {% endif %}
+
+                    {% if passeio.image_9 %}
+                    <div class="item">
+                    <img src="{{passeio.image_9.url}}" alt="{{passeio.decription_9}}" width="1000" height="500">
+                    </div>
+                    {% endif %} 
+
+                    {% if passeio.image_10 %}
+                    <div class="item">
+                    <img src="{{passeio.image_10.url}}" alt="{{passeio.decription_10}}" width="1000" height="500">
+                    </div>
+                    {% endif %} 
+
 				</div>
 
 

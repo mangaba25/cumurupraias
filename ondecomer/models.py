@@ -38,6 +38,20 @@ class OndeComer(models.Model):
     image_4 = models.ImageField(upload_to='cumuruxatiba/images-ondecomer', verbose_name='Imagem_4', null=True, blank=True)
     decription_4 = models.CharField('Descrição-4', max_length=100, blank=True)
 
+    image_5 = models.ImageField(upload_to='cumuruxatiba/images-ondecomer', verbose_name='Imagem_5', null=True, blank=True)
+    decription_5 = models.CharField('Descrição-5', max_length=100, blank=True)
+    image_6 = models.ImageField(upload_to='cumuruxatiba/images-ondecomer', verbose_name='Imagem_6', null=True, blank=True)
+    decription_6 = models.CharField('Descrição-6', max_length=100, blank=True)
+    image_7 = models.ImageField(upload_to='cumuruxatiba/images-ondecomer', verbose_name='Imagem_7', null=True, blank=True)
+    decription_7 = models.CharField('Descrição-7', max_length=100, blank=True)
+    image_8 = models.ImageField(upload_to='cumuruxatiba/images-ondecomer', verbose_name='Imagem_8', null=True, blank=True)
+    decription_8 = models.CharField('Descrição-8', max_length=100, blank=True)
+    image_9 = models.ImageField(upload_to='cumuruxatiba/images-ondecomer', verbose_name='Imagem_9', null=True, blank=True)
+    decription_9 = models.CharField('Descrição-9', max_length=100, blank=True)
+    image_10 = models.ImageField(upload_to='cumuruxatiba/images-ondecomer', verbose_name='Imagem_10', null=True, blank=True)
+    decription_10 = models.CharField('Descrição-10', max_length=100, blank=True)
+    
+
     description = models.TextField('Descrição', blank=True)
     address = models.CharField('Endereço', max_length=100, blank=True)
     email = models.EmailField('E-mail', max_length=50, blank=True)

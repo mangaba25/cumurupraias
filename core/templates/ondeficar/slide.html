@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load thumbnail %}
 {% block title %}
 	{{ ondeficar|capfirst }} | {{ block.super }}
 {% endblock %}
@@ -14,6 +15,30 @@
 					<li data-target="#myCarousel" data-slide-to="1"></li>
 					<li data-target="#myCarousel" data-slide-to="2"></li>
 					<li data-target="#myCarousel" data-slide-to="3"></li>
+
+					{% if ondeficar.image_5 %}
+						<li data-target="#myCarousel" data-slide-to="4"></li>
+					{% endif  %}
+
+					{% if ondeficar.image_6 %}
+						<li data-target="#myCarousel" data-slide-to="5"></li>
+					{% endif  %}
+
+					{% if ondeficar.image_7%}
+						<li data-target="#myCarousel" data-slide-to="6"></li>
+					{% endif  %}
+
+					{% if ondeficar.image_8 %}
+						<li data-target="#myCarousel" data-slide-to="7"></li>
+					{% endif  %}
+
+					{% if ondeficar.image_9 %}
+						<li data-target="#myCarousel" data-slide-to="8"></li>
+					{% endif  %}
+
+					{% if ondeficar.image_10 %}
+						<li data-target="#myCarousel" data-slide-to="9"></li>
+					{% endif  %}
 				</ol>
 
 					 <!-- Wrapper for slides -->
@@ -25,7 +50,6 @@
 
 					<div class="item">
 					<img src="{{ondeficar.image_2.url}}" alt="{{ondeficar.decription_2}}" width="1000" height="500">
-
 					</div>
 
 					<div class="item">
@@ -35,6 +59,44 @@
 					<div class="item">
 					<img src="{{ondeficar.image_4.url}}" alt="{{ondeficar.decription_4}}" width="1000" height="500">
 					</div>
+
+                    {% if ondeficar.image_5 %}
+                    <div class="item">
+                    <img src="{{ondeficar.image_5.url}}" alt="{{ondeficar.decription_5}}" width="1000" height="500">
+                    </div>
+                    {% endif %}
+
+                    {% if ondeficar.image_6 %}
+                    <div class="item">
+                    <img src="{{ondeficar.image_6.url}}" alt="{{ondeficar.decription_6}}" width="1000" height="500">
+                    </div>
+                    {% endif %} 
+
+                    {% if ondeficar.image_7 %}
+                    <div class="item">
+                    <img src="{{ondeficar.image_7.url}}" alt="{{ondeficar.decription_7}}" width="1000" height="500">
+                    </div>
+                    {% endif %} 
+
+                    {% if ondeficar.image_8 %}
+                    <div class="item">
+                    <img src="{{ondeficar.image_8.url}}" alt="{{ondeficar.decription_8}}" width="1000" height="500">
+                    </div>
+                    {% endif %}
+
+                    {% if ondeficar.image_9 %}
+                    <div class="item">
+                    <img src="{{ondeficar.image_9.url}}" alt="{{ondeficar.decription_9}}" width="1000" height="500">
+                    </div>
+                    {% endif %} 
+
+                    {% if ondeficar.image_10 %}
+                    <div class="item">
+                    <img src="{{ondeficar.image_10.url}}" alt="{{ondeficar.decription_10}}" width="1000" height="500">
+                    </div>
+                    {% endif %} 
+
+
 				</div>
 
 

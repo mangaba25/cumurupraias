@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load thumbnail %}
 {% block title %}
 	{{ praia|capfirst}} | {{ block.super }}
 {% endblock %}
@@ -14,10 +15,32 @@
 					<li data-target="#myCarousel" data-slide-to="1"></li>
 					<li data-target="#myCarousel" data-slide-to="2"></li>
 					<li data-target="#myCarousel" data-slide-to="3"></li>
+
+					{% if praia.image_5 %}
+						<li data-target="#myCarousel" data-slide-to="4"></li>
+					{% endif  %}
+
+					{% if praia.image_6 %}
+						<li data-target="#myCarousel" data-slide-to="5"></li>
+					{% endif  %}
+
+					{% if praia.image_7%}
+						<li data-target="#myCarousel" data-slide-to="6"></li>
+					{% endif  %}
+
+					{% if praia.image_8 %}
+						<li data-target="#myCarousel" data-slide-to="7"></li>
+					{% endif  %}
+
+					{% if praia.image_9 %}
+						<li data-target="#myCarousel" data-slide-to="8"></li>
+					{% endif  %}
+
+					{% if praia.image_10 %}
+						<li data-target="#myCarousel" data-slide-to="9"></li>
+					{% endif  %}
 				</ol>
 
-					 <!-- Wrapper for slides -->
-				{{ondecomer.descripition_1}}
 				<div class="carousel-inner" role="listbox"  >
 					<div class="item active">
 					<img src="{{praia.image_1.url}}" alt="{{praia.decription_1}}" width="1000" height="500">
@@ -37,6 +60,43 @@
 					<div class="item">
 					<img src="{{praia.image_4.url}}" alt="{{praia.decription_4}}" width="1000" height="500">
 					</div>
+
+                    {% if praia.image_5 %}
+                    <div class="item">
+                    <img src="{{praia.image_5.url}}" alt="{{praia.decription_5}}" width="1000" height="500">
+                    </div>
+                    {% endif %}
+
+                    {% if praia.image_6 %}
+                    <div class="item">
+                    <img src="{{praia.image_6.url}}" alt="{{praia.decription_6}}" width="1000" height="500">
+                    </div>
+                    {% endif %} 
+
+                    {% if praia.image_7 %}
+                    <div class="item">
+                    <img src="{{praia.image_7.url}}" alt="{{praia.decription_7}}" width="1000" height="500">
+                    </div>
+                    {% endif %} 
+
+                    {% if praia.image_8 %}
+                    <div class="item">
+                    <img src="{{praia.image_8.url}}" alt="{{praia.decription_8}}" width="1000" height="500">
+                    </div>
+                    {% endif %}
+
+                    {% if praia.image_9 %}
+                    <div class="item">
+                    <img src="{{praia.image_9.url}}" alt="{{praia.decription_9}}" width="1000" height="500">
+                    </div>
+                    {% endif %} 
+
+                    {% if praia.image_10 %}
+                    <div class="item">
+                    <img src="{{praia.image_10.url}}" alt="{{praia.decription_10}}" width="1000" height="500">
+                    </div>
+                    {% endif %} 
+
 				</div>
 
 
